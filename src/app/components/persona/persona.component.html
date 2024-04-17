@@ -1,0 +1,30 @@
+
+<div style="padding: 50px;">
+    <h1 class="text-center">Lista Personas!</h1>
+    <table class="table table-hover">
+        <thead class="table-danger">
+            <tr>
+                <th scope="col">Primer Nombre</th>
+                <th scope="col">Segundo Nombre</th>
+                <th scope="col">Primer Apellido</th>
+                <th scope="col">Segundo Apellido</th>
+                <th scope="col">Ciudad</th>
+                <th scope="col">Direccion residencia</th>
+                <th scope="col">Celular</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (persona of personaList; track $index) {
+                <tr>
+                    <td>{{persona.primerNombre}}</td>
+                    <td>{{persona.segundoNombre}}</td>
+                    <td>{{persona.primerApellido}}</td>
+                    <td>{{persona.segundoApellido}}</td>
+                    <td>{{persona.ciudadResidencia}}</td>
+                    <td>{{persona.direccion}}</td>
+                    <td>{{persona.telefono}}</td>
+                </tr>
+              }
+        </tbody>
+    </table>
+</div>
